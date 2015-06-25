@@ -26,7 +26,7 @@ var generator = function(){
 		function createResourceFiles(json) {
 			for (var locale in json) {
 				var jsonData = JSON.stringify(json[locale]);
-				var localeFileName = generateLocaleName(locale) + ".js";
+				var localeFileName = generateLocaleName(locale) + ".json";
 				fs.writeFileSync(outputDir + localeFileName, jsonData);
 				console.log(outputDir + localeFileName);
 			}
