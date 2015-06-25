@@ -52,6 +52,6 @@ var parser = function() {
 
         return json;
     }
-}
+};
 
 module.exports = parser();
