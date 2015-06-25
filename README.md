@@ -4,10 +4,10 @@ A library providing methods to easily generate `json` resource files from `xlsx`
 
 ## Installation
 
-  npm install easyresources --save
+  npm install easyresources
 
 ## Usage
 
   var easyresources = require('easyresources');
 
-  easyresources.generateTemplateResources('Simple course', 'resources.xlsx', './lang');
+  easyresources.generateTemplateResources('Simple course', 'resources.xlsx', './lang/');
