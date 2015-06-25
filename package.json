@@ -1,0 +1,24 @@
+{
+    "name": "easyresources",
+    "version": "0.0.1",
+    "description": "A library providing methods to easily generate json resource files from xlsx resource file",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "localization",
+        "easygenerator",
+        "template"
+    ],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/YuliaSavchuk/easyresources.git"
+	},
+    "author": "easygenerator",
+    "license": "ISC",
+    "preferGlobal": true,
+    "devDependencies": {
+        "node-xlsx": "^0.5.1"
+    }
+}
