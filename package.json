@@ -1,6 +1,6 @@
 {
     "name": "easyresources",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "A library providing methods to easily generate json resource files from xlsx resource file",
     "main": "index.js",
     "scripts": {
