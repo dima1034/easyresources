@@ -11,17 +11,21 @@
         "easygenerator",
         "template"
     ],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/YuliaSavchuk/easyresources.git"
-	},
-	"bugs": {
-		"url": "https://github.com/YuliaSavchuk/easyresources/issues"
-	},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/YuliaSavchuk/easyresources.git"
+    },
+    "bugs": {
+        "url": "https://github.com/YuliaSavchuk/easyresources/issues"
+    },
     "author": "easygenerator",
     "license": "ISC",
     "preferGlobal": true,
     "dependencies": {
-        "node-xlsx": "^0.5.1"
+        "node-xlsx": "^0.5.1",
+        "commander": "^2.8.1"
+    },
+    "bin": {
+        "easyresources": "index.js"
     }
 }
