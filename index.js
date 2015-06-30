@@ -1,7 +1,7 @@
 ﻿#! /usr/bin/env node
 
-var program = require('commander');
-var templateResouceGenerator = require('./templateResourceGenerator');
+var program = require('commander'),
+    resourceGenerationService = require('./lib/resourceGenerationService');
 
 program
     .version('0.0.6')
@@ -14,17 +14,25 @@ program
 });
 
 program
-  .command('generate')
-  .alias('g')
-  .description('Generates json resource files for templates from *.xlsx resource file')
+  .command('generate-fom-google-spreadsheet')
+  .alias('gg')
+  .description('Generates json resource files for templates from google spreadsheet resource file')
+  .option("-t, --templateName <templateName>", "Template name")
+  .option("-f, --resourceId [resourceFileId]", "Google spreadsheet resource file id")
+  .option("-o, --outputPath [outputPath]", "Output path")
+  .action(function (options) {
+    resourceGenerationService.generateFromGoogleSpreadsheet(options.templateName, options.resourceFileId, options.outputPath);
+});
+
+program
+  .command('generate-from-excel-workbook')
+  .alias('ge')
+  .description('Generates json resource files for templates from excel workbook(*.xlsx) resource file')
   .option("-t, --templateName <templateName>", "Template name")
   .option("-f, --resourceFilePath [resourceFilePath]", "Resource file path *.xlsx")
   .option("-o, --outputPath [outputPath]", "Output path")
   .action(function (options) {
-    var resourceFilePath = options.resourceFilePath || "resources.xlsx";
-    var outputPath = options.outputPath || "_output/";
-    
-    templateResouceGenerator.generate(options.templateName, resourceFilePath, outputPath);
+    resourceGenerationService.generateFromExcelWorkbook(options.templateName, options.resourceFilePath, options.outputPath);
 });
 
 program.parse(process.argv);
