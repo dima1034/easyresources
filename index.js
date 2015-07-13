@@ -14,7 +14,7 @@ program
 });
 
 program
-  .command('generate-fom-google-spreadsheet')
+  .command('generate-from-google-spreadsheet')
   .alias('gg')
   .description('Generates json resource files for templates from google spreadsheet resource file')
   .option("-t, --templateName <templateName>", "Template name")
