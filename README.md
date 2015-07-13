@@ -20,4 +20,4 @@
 
   $ easyresources *generate-from-google-spreadsheet* -t "Simple course" -f "1TtXjyDSHvPPPUVo9dynM-HyeuA9wT2O852stPKLqV58" -o "_output/"
   
-  $ easyresources *gg* -t "Simple course"
+  $ easyresources *generate* -t "Simple course"

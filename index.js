@@ -8,14 +8,16 @@ program
     .on('--help', function () {
     console.log('  Examples:');
     console.log('');
-    console.log('    $ easyresources generate -t "Simple course" -f "resources.xlsx" -o "_output/"');
+    console.log('    $ easyresources generate-from-google-spreadsheet -t "Simple course" -f "1TtXjyDSHvPPPUVo9dynM-HyeuA9wT2O852stPKLqV58" -o "_output/"');
     console.log('    $ easyresources generate -t "Simple course"');
     console.log('');
+    console.log('    $ easyresources generate-from-excel-workbook -t "Simple course" -f "resources.xlsx" -o "_output/"');
+    console.log('    $ easyresources ge -t "Simple course"');
 });
 
 program
   .command('generate-from-google-spreadsheet')
-  .alias('gg')
+  .alias('generate')
   .description('Generates json resource files for templates from google spreadsheet resource file')
   .option("-t, --templateName <templateName>", "Template name")
   .option("-f, --resourceId [resourceFileId]", "Google spreadsheet resource file id")
