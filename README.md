@@ -1,6 +1,6 @@
 ﻿# easyresources
 
-Console app to easily generate `json` resource files from `xlsx` resource file
+  Console app to easily generate `json` resource files from `xlsx` or `google spreadsheet` resource file 
 
 ## Installation
 
