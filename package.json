@@ -22,6 +22,7 @@
   "license": "ISC",
   "preferGlobal": true,
   "dependencies": {
+    "colors": "^1.1.2",
     "commander": "^2.8.1",
     "google-spreadsheet": "^0.3.1",
     "node-xlsx": "^0.5.1",
