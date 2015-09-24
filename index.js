@@ -12,7 +12,7 @@ program
     console.log('');
     console.log('    $ easyresources g %MODE%');
     console.log('    $ easyresources generate %MODE% -w "Resources" -f "%RESOURCE_FILE%" -o "_output" -e "nl, de"');
-    console.log('    $ easyresources generate %MODE% --worksheetName "Resources" --resourceFile "%RESOURCE_FILE%" --outputPath "_output" -excludeLocalizations "nl, de"');
+    console.log('    $ easyresources generate %MODE% --worksheetName "Resources" --resourceFile "%RESOURCE_FILE%" --outputPath "_output" --excludeLocalizations "nl, de"');
     console.log('');
     console.log('  %MODE% - optional. Possible values:');
     console.log('');

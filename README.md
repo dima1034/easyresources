@@ -12,9 +12,9 @@
 
    $ easyresources g *%MODE%*
 
-   $ easyresources generate *%MODE%* -w "Resources" -f "*%RESOURCE_FILE%*" -o "_output"
+   $ easyresources generate *%MODE%* -w "Resources" -f "*%RESOURCE_FILE%*" -o "_output" -e "nl, de"
 
-   $ easyresources generate *%MODE%* --worksheetName "Resources" --resourceFile "*%RESOURCE_FILE%*" --outputPath "_output"
+   $ easyresources generate *%MODE%* --worksheetName "Resources" --resourceFile "*%RESOURCE_FILE%*" --outputPath "_output" --excludeLocalizations "nl, de"
 
    *%MODE%* - optional. Possible values:
 
