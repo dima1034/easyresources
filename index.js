@@ -11,8 +11,8 @@ program
     console.log('  Generate resources');
     console.log('');
     console.log('    $ easyresources g %MODE%');
-    console.log('    $ easyresources generate %MODE% -w "Resources" -f "%RESOURCE_FILE%" -o "_output"');
-    console.log('    $ easyresources generate %MODE% --worksheetName "Resources" --resourceFile "%RESOURCE_FILE%" --outputPath "_output"');
+    console.log('    $ easyresources generate %MODE% -w "Resources" -f "%RESOURCE_FILE%" -o "_output" -e "nl, de"');
+    console.log('    $ easyresources generate %MODE% --worksheetName "Resources" --resourceFile "%RESOURCE_FILE%" --outputPath "_output" -excludeLocalizations "nl, de"');
     console.log('');
     console.log('  %MODE% - optional. Possible values:');
     console.log('');
@@ -32,8 +32,9 @@ program
   .option("-w, --worksheetName [worksheetName]", "Worksheet name [Resources]")
   .option("-f, --resourceFile [resourceFile]", "Spreadsheet resource file [1TtXjyDSHvPPPUVo9dynM-HyeuA9wT2O852stPKLqV58]")
   .option("-o, --outputPath [outputPath]", "Output path [_output]")
+  .option("-e, --excludeLocalizations [excludeLocalization]", "Exclude localizations, separated by ','")
   .action(function (mode, options) {
-    resourceGenerationService.generateResources(mode, options.worksheetName, options.resourceFile, options.outputPath);
+    resourceGenerationService.generateResources(mode, options);
 });
 
 program.parse(process.argv);
