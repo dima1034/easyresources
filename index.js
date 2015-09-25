@@ -4,7 +4,7 @@ var program = require('commander'),
     resourceGenerationService = require('./lib/resourceGenerationService');
 
 program
-    .version('0.0.14')
+    .version('0.0.15')
     .on('--help', function () {
     console.log('  Examples:');
     console.log('');
