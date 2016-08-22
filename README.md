@@ -10,16 +10,11 @@
 
   **Generate resources**
 
-   $ easyresources g *%MODE%*
+   $ easyresources g 
 
-   $ easyresources generate *%MODE%* -w "Resources" -f "*%RESOURCE_FILE%*" -o "_output" -e "nl, de"
+   $ easyresources generate -w "Resources" -f "*%RESOURCE_FILE%*" -o "_output" -d 1 -e "nl, de"
 
-   $ easyresources generate *%MODE%* --worksheetName "Resources" --resourceFile "*%RESOURCE_FILE%*" --outputPath "_output" --excludeLocalizations "nl, de"
-
-   *%MODE%* - optional. Possible values:
-
-       • app - is used by default;
-       • template
+   $ easyresources generate --worksheetName "Resources" --resourceFile "*%RESOURCE_FILE%*" --outputPath "_output" --useDefaultLocalizationWhenNoTranslation 1 --excludeLocalizations "nl, de"
 
    *%RESOURCE_FILE%* possible values:
 
